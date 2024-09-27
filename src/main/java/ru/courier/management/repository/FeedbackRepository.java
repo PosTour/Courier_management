@@ -1,4 +1,9 @@
 package ru.courier.management.repository;
 
-public interface FeedbackRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import ru.courier.management.domain.Feedback;
+
+import java.util.UUID;
+
+public interface FeedbackRepository extends JpaRepository<Feedback, UUID> {
 }

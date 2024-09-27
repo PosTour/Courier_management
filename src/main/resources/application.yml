@@ -11,5 +11,6 @@ spring:
         coords: coords
         chat: chat
         message: message
+        feedback: feedback
       group-id: group1
       auto-offset-reset: earliest

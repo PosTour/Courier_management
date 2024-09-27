@@ -1,6 +1,5 @@
 package ru.courier.management.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.courier.management.domain.Courier;
 import ru.courier.management.dto.CoordinateDto;
