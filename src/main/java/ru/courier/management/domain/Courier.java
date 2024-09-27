@@ -18,7 +18,6 @@ import java.util.UUID;
 public class Courier {
 
     @Id
-    @UuidGenerator
     private UUID id;
 
     @Column(nullable = false, length = 50)

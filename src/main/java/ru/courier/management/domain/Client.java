@@ -17,7 +17,6 @@ import java.util.UUID;
 public class Client {
 
     @Id
-    @UuidGenerator
     private UUID id;
 
     @Column(nullable = false, length = 50)
