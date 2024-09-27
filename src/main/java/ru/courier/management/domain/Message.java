@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
-import org.springframework.data.annotation.CreatedDate;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -65,10 +64,10 @@ public class Message {
     @Temporal(TemporalType.TIMESTAMP)
     private Date receivedAt;
 
-    public Message(Chat chat, String message, Date receivedAt, SenderType sender) {
+    public Message(Chat chat, SenderType sender, String message, Date receivedAt) {
         this.chat = chat;
+        this.sender = sender;
         this.message = message;
         this.receivedAt = receivedAt;
-        this.sender = sender;
     }
 }

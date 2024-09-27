@@ -10,5 +10,6 @@ spring:
         courier: courier
         coords: coords
         chat: chat
+        message: message
       group-id: group1
       auto-offset-reset: earliest
