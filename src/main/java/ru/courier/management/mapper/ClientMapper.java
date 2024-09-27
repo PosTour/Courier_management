@@ -6,5 +6,5 @@ import ru.courier.management.dto.ClientDto;
 
 @Mapper
 public interface ClientMapper {
-    Client clientToClientDto(ClientDto clientDto);
+    Client clientDtoToClient(ClientDto clientDto);
 }

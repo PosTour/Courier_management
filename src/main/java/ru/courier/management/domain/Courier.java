@@ -26,9 +26,9 @@ public class Courier {
     @Column(nullable = false, length = 11)
     private String phone;
 
-    private BigDecimal longitude;
+    private BigDecimal longitude = BigDecimal.valueOf(0);
 
-    private BigDecimal latitude;
+    private BigDecimal latitude = BigDecimal.valueOf(0);
 
     @OneToMany(mappedBy = "courier")
     private List<Chat> chats;

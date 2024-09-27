@@ -13,11 +13,11 @@ import ru.courier.management.service.ClientService;
 public class ClientListener {
 
     private final ClientService clientService;
-    ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper;
 
     @SneakyThrows
-    @KafkaListener(topics = "${spring.kafka.consumer.client-topic}", groupId = "${spring.kafka.consumer.group-id}")
-    public void handleClientEvent(String message) {
+    @KafkaListener(topics = "${spring.kafka.consumer.topics.client}", groupId = "${spring.kafka.consumer.group-id}")
+    public void handleClientCreation(String message) {
         ClientDto clientDto = mapper.readValue(message, ClientDto.class);
         clientService.save(clientDto);
     }

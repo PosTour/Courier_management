@@ -2,7 +2,6 @@ package ru.courier.management.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.courier.management.domain.Client;
 import ru.courier.management.dto.ClientDto;
 import ru.courier.management.mapper.ClientMapper;
 import ru.courier.management.repository.ClientRepository;
@@ -15,7 +14,7 @@ public class ClientService {
     private final ClientMapper clientMapper;
 
     public void save(ClientDto clientDto) {
-        var client = clientMapper.clientToClientDto(clientDto);
+        var client = clientMapper.clientDtoToClient(clientDto);
         clientRepository.save(client);
     }
 }

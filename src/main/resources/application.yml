@@ -5,6 +5,9 @@ spring:
   kafka:
     bootstrapServers: kafka:9092
     consumer:
-      client-topic: client
+      topics:
+        client: client
+        courier: courier
+        coords: coords
       group-id: group1
       auto-offset-reset: earliest
