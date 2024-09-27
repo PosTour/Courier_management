@@ -10,13 +10,19 @@ import ru.courier.management.repository.ChatRepository;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class ChatService {
 
     private final ChatRepository chatRepository;
     private final CourierService courierService;
     private final ClientService clientService;
     private final ChatMapper chatMapper;
+
+    public ChatService(ChatRepository chatRepository, CourierService courierService, ClientService clientService) {
+        this.chatRepository = chatRepository;
+        this.courierService = courierService;
+        this.clientService = clientService;
+        this.chatMapper = new ChatMapperImpl();
+    }
 
     public Chat findChatById(UUID id) {
         var chatOpt = chatRepository.findById(id);

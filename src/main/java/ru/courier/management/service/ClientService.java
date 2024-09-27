@@ -10,11 +10,15 @@ import ru.courier.management.repository.ClientRepository;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class ClientService {
 
     private final ClientRepository clientRepository;
     private final ClientMapper clientMapper;
+
+    public ClientService(ClientRepository clientRepository, ClientMapper clientMapper) {
+        this.clientRepository = clientRepository;
+        this.clientMapper = new ClientMapperImpl();
+    }
 
     public Client findClientById(UUID id) {
         var clientOpt = clientRepository.findById(id);

@@ -9,8 +9,6 @@ import java.util.UUID;
 @Setter
 public class ChatDto {
 
-    private UUID id;
-
     private UUID order;
 
     private UUID clientId;

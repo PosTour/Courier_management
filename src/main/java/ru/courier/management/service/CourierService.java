@@ -11,11 +11,15 @@ import ru.courier.management.repository.CourierRepository;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class CourierService {
 
     private final CourierRepository courierRepository;
     private final CourierMapper courierMapper;
+
+    public CourierService(CourierRepository courierRepository, CourierMapper courierMapper) {
+        this.courierRepository = courierRepository;
+        this.courierMapper = new CourierMapperImpl();
+    }
 
     public Courier findCourierById(UUID id) {
         var courierOpt = courierRepository.findById(id);
