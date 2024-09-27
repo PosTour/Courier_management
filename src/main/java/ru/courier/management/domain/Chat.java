@@ -18,7 +18,7 @@ public class Chat {
 
     @Id
     @UuidGenerator
-    private int id;
+    private UUID id;
 
     private UUID order;
 
