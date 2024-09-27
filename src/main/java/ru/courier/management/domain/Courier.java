@@ -36,7 +36,8 @@ public class Courier {
     @OneToMany(mappedBy = "courier")
     private List<Feedback> feedbacks;
 
-    public Courier(String name, String phone, BigDecimal longitude, BigDecimal latitude) {
+    public Courier(UUID id, String name, String phone, BigDecimal longitude, BigDecimal latitude) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
         this.longitude = longitude;

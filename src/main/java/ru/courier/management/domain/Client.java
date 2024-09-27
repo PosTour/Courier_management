@@ -31,7 +31,8 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private List<Feedback> feedbacks;
 
-    public Client(String name, String phone) {
+    public Client(UUID id, String name, String phone) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
     }
