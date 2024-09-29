@@ -14,3 +14,8 @@ spring:
         feedback: feedback
       group-id: group1
       auto-offset-reset: earliest
+
+url:
+  yandex: https://api.routing.yandex.net/v2/distancematrix
+
+apikey:
